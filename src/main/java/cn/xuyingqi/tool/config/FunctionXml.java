@@ -1,6 +1,5 @@
 package cn.xuyingqi.tool.config;
 
-import java.io.File;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
@@ -58,9 +57,7 @@ public final class FunctionXml {
 
 				JAXBContext jc = JAXBContext.newInstance(FunctionXml.class);
 				Unmarshaller u = jc.createUnmarshaller();
-				functionXml = (FunctionXml) u.unmarshal(
-						new File(FunctionXml.class.getClassLoader().getResource(Constant.FUNCTION_FILE).getPath()));
-
+				functionXml = (FunctionXml) u.unmarshal(Class.class.getResourceAsStream(Constant.FUNCTION_FILE));
 			} catch (JAXBException e) {
 				e.printStackTrace();
 			}

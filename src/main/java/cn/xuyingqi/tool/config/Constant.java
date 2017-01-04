@@ -11,5 +11,5 @@ public final class Constant {
 	/**
 	 * 服务器配置文件
 	 */
-	public static final String FUNCTION_FILE = "function.xml";
+	public static final String FUNCTION_FILE = "/function.xml";
 }
