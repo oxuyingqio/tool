@@ -4,10 +4,10 @@
 
 	<!-- 模块信息 -->
 	<groupId>cn.xuyingqi</groupId>
-	<artifactId>script</artifactId>
+	<artifactId>tool</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
-	<name>脚本</name>
+	<name>工具</name>
 	<url>http://maven.apache.org</url>
 
 	<!-- 公共配置 -->
