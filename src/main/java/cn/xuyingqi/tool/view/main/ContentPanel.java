@@ -42,12 +42,14 @@ public class ContentPanel extends JPanel {
 		// 添加tab页
 		JTabbedPane tab = new JTabbedPane();
 
-		// 功能配置集合
+		// 获取功能配置集合
 		List<FunctionConfig> configs = FunctionXml.getInstance().getFunctionConfigs();
+		// 遍历功能配置集合
 		for (int i = 0, length = configs.size(); i < length; i++) {
 
 			try {
 
+				// 添加对应功能
 				tab.add(configs.get(i).getDesc(), (JPanel) this.getClass().getClassLoader()
 						.loadClass(configs.get(i).getClassName()).newInstance());
 			} catch (InstantiationException e) {
@@ -59,6 +61,7 @@ public class ContentPanel extends JPanel {
 			}
 		}
 
+		// 添加Tab页
 		this.add(tab, BorderLayout.CENTER);
 	}
 }
